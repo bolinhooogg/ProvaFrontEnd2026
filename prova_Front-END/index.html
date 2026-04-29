@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Front-end</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="brand-title">Prova Front-end</h1>
+            <nav class="main-navigation">
+                <ul>
+                    <li>Home</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-limit">
+        <section class="cards-grid">
+            <article class="info-card">
+                <h2>Card 1</h2>
+                <p>Conteúdo de exemplo para o card.</p>
+                <button type="button" onclick="alert('Você clicou no Card 1')">Clique</button>
+            </article>
+
+            <article class="info-card">
+                <h2>Card 2</h2>
+                <p>Outro conteúdo de exemplo.</p>
+                <button type="button" onclick="alert('Você clicou no Card 2!')">Clique</button>
+            </article>
+
+            <article class="info-card">
+                <h2>Card 3</h2>
+                <p>Mais um exemplo de card.</p>
+                <button type="button" onclick="alert('Você clicou no Card 3!')">Clique</button>
+            </article>
+        </section>
+
+        <section class="user-action">
+            <div class="form-container">
+                <input type="text" id="nomeInput" placeholder="Digite seu nome">
+                <button class="btn-enviar" onclick="enviarNome()">Enviar</button>
+            </div>
+            <p id="greeting"></p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>Professor: Heytor | Prova prática de Front-end</p>
+    </footer>
+
+    <script>
+        function enviarNome() {
+            const nome = document.getElementById('nomeInput').value;
+            const greeting = document.getElementById('greeting');
+            if (nome.trim() !== '') {
+                greeting.textContent = 'Olá, ' + nome + '!';
+            }
+        }
+    </script>
+</body>
+</html>
